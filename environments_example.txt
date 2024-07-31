@@ -1,0 +1,11 @@
+recipient_email=recipient@example.com
+subject=Test Subject
+body=This is the email body.
+directory=/path/to/your/directory
+smtp_host=smtp.example.com
+smtp_username=your-email@example.com
+smtp_password=your-email-password
+smtp_port=587
+smtp_secure=tls
+from_email=your-email@example.com
+from_name=Your Name
