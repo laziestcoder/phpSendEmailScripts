@@ -11,6 +11,9 @@ BACKUP_FILE="$BACKUP_DIR/${DB_NAME}_backup_$DATE.sql.gz"
 # Ensure the backup directory exists
 # mkdir -p "$BACKUP_DIR"
 
+# remove old backup files
+rm -rf ${DB_NAME}_backup_*.sql.gz
+
 # Perform the backup and compress it using gzip
 mysqldump -u "$DB_USER" -p"$DB_PASSWORD" "$DB_NAME" | gzip > "$BACKUP_FILE"
 
