@@ -1,3 +1,4 @@
 environments.txt
 *sql*
 vendor
+*.sh
