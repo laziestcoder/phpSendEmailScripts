@@ -1,0 +1,2 @@
+# cron job run every month day 1 at 0001
+01	00	1	*	*	/home/<user>/<dir>/dbBackupAndSendEmail.sh
