@@ -57,7 +57,7 @@ function sendEmailWithAttachments($env) {
 
         // Send the email
         $mail->send();
-        echo 'Message has been sent\n';
+        echo "Message has been sent.\n";
     } catch (Exception $e) {
         echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}\n";
     }
@@ -74,7 +74,9 @@ if (php_sapi_name() == 'cli') {
     if (!file_exists($envFilePath)) {
         echo "Environment file not found: $envFilePath\n";
         exit(1);
-    }
+    } else {
+	$envFilePath = "environments.txt";
+    } 
 
     $env = parseEnvironmentFile($envFilePath);
     sendEmailWithAttachments($env);
