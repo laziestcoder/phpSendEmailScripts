@@ -4,7 +4,7 @@
 DB_NAME=""
 DB_USER=""
 DB_PASSWORD=""
-BACKUP_DIR="./"
+BACKUP_DIR=""
 DATE=$(date +%Y%m%d_%H%M%S)
 BACKUP_FILE="$BACKUP_DIR/${DB_NAME}_backup_$DATE.sql.gz"
 
@@ -27,6 +27,6 @@ fi
 
 # Optionally, you can add cleanup logic here to remove old backups
 # Example: Delete backups older than 7 days
-find "$BACKUP_DIR" -type f -name "*.sql.gz" -mtime +7 -exec rm {} \;
+# find "$BACKUP_DIR" -type f -name "*.sql.gz" -mtime +7 -exec rm {} \;
 
 exit 0

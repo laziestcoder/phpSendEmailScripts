@@ -2,3 +2,4 @@ environments.txt
 *sql*
 vendor
 *.sh
+.idea

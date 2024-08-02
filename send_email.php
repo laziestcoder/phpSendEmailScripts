@@ -67,19 +67,21 @@ function sendEmailWithAttachments($env) {
 if (php_sapi_name() == 'cli') {
     if ($argc !== 2) {
         //echo "Usage: php send_email.php <environment_file>\n";
-	//exit(1);
-	$argv[1] = "environments.txt";
+	    //exit(1);
+	    $argv[1] = "environments.txt";
     }
 
     $envFilePath = $argv[1];
     if (!file_exists($envFilePath)) {
         echo "Environment file not found: $envFilePath\n";
-	exit(1);
+	    exit(1);
     }
 
     $env = parseEnvironmentFile($envFilePath);
     sendEmailWithAttachments($env);
+    exit(0);
 } else {
     echo "This script must be run from the command line.";
+    exit(1);
 }
 
