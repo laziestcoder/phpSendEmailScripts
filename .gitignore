@@ -1,5 +1,5 @@
 environments.txt
 *sql*
 vendor
-*.sh
+*sh
 .idea
